@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Colegio.Entities.Matricula>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Alumno.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aula.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alumno.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aula.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observaciones)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MatriculaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MatriculaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MatriculaId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,35 @@
+﻿@model Colegio.Entities.Evaluacion
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Evaluacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEvaluacion.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEvaluacion.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EvaluacionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3EB8E54-BF21-4A39-9AAA-1893B156EC12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Colegio.Entities</RootNamespace>
+    <AssemblyName>Colegio.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\AlumnoDTO.cs" />
+    <Compile Include="DTO\ApoderadoDTO.cs" />
+    <Compile Include="DTO\AreaCurricularDTO.cs" />
+    <Compile Include="DTO\AsistenciaDTO.cs" />
+    <Compile Include="DTO\AulaDTO.cs" />
+    <Compile Include="DTO\CursoDTO.cs" />
+    <Compile Include="DTO\DireccionDTO.cs" />
+    <Compile Include="DTO\DistritoDTO.cs" />
+    <Compile Include="DTO\EvaluacionDTO.cs" />
+    <Compile Include="DTO\GradoDTO.cs" />
+    <Compile Include="DTO\HorarioDTO.cs" />
+    <Compile Include="DTO\MatriculaDTO.cs" />
+    <Compile Include="DTO\NivelDTO.cs" />
+    <Compile Include="DTO\NotaDTO.cs" />
+    <Compile Include="DTO\ProfesorDTO.cs" />
+    <Compile Include="DTO\ReciboDTO.cs" />
+    <Compile Include="DTO\SesionDTO.cs" />
+    <Compile Include="DTO\TipoEvaluacionDTO.cs" />
+    <Compile Include="Entitites\Alumno.cs" />
+    <Compile Include="Entitites\Apoderado.cs" />
+    <Compile Include="Entitites\AreaCurricular.cs" />
+    <Compile Include="Entitites\Asistencia.cs" />
+    <Compile Include="Entitites\Aula.cs" />
+    <Compile Include="Entitites\Curso.cs" />
+    <Compile Include="Entitites\Direccion.cs" />
+    <Compile Include="Entitites\Distrito.cs" />
+    <Compile Include="Entitites\Evaluacion.cs" />
+    <Compile Include="Entitites\Grado.cs" />
+    <Compile Include="Entitites\Horario.cs" />
+    <Compile Include="Entitites\Matricula.cs" />
+    <Compile Include="Entitites\Nivel.cs" />
+    <Compile Include="Entitites\Nota.cs" />
+    <Compile Include="Entitites\Profesor.cs" />
+    <Compile Include="Entitites\Sesion.cs" />
+    <Compile Include="Enums\Dia.cs" />
+    <Compile Include="Enums\Sexo.cs" />
+    <Compile Include="Enums\TipoDocumento.cs" />
+    <Compile Include="IRespositories\IApoderadoRepository.cs" />
+    <Compile Include="IRespositories\IAreaCurricularRepository.cs" />
+    <Compile Include="IRespositories\IAsistenciaRepository.cs" />
+    <Compile Include="IRespositories\IAulaRepository.cs" />
+    <Compile Include="IRespositories\ICursoRepository.cs" />
+    <Compile Include="IRespositories\IDireccionRepository.cs" />
+    <Compile Include="IRespositories\IDistritoRepository.cs" />
+    <Compile Include="IRespositories\IEvaluacionRepository.cs" />
+    <Compile Include="IRespositories\IGradoRepository.cs" />
+    <Compile Include="IRespositories\IHorarioRepository.cs" />
+    <Compile Include="IRespositories\IMatriculaRepository.cs" />
+    <Compile Include="IRespositories\INivelRepository.cs" />
+    <Compile Include="IRespositories\INotaRepository.cs" />
+    <Compile Include="IRespositories\IReciboRepository.cs" />
+    <Compile Include="IRespositories\ISesionRepository.cs" />
+    <Compile Include="IRespositories\ITipoEvaluacionRepository.cs" />
+    <Compile Include="IRespositories\IProfesorRepository.cs" />
+    <Compile Include="IRespositories\IAlumnoRepository.cs" />
+    <Compile Include="IRespositories\IRepository.cs" />
+    <Compile Include="IRespositories\IUnityOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entitites\Recibo.cs" />
+    <Compile Include="Entitites\TipoEvaluacion.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

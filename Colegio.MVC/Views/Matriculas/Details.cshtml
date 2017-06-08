@@ -1,0 +1,51 @@
+﻿@model Colegio.Entities.Matricula
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matricula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Alumno.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alumno.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aula.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aula.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MatriculaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

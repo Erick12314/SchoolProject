@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Colegio.Entities.Nota>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Alumno.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Curso.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evaluacion.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Puntaje)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alumno.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Curso.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evaluacion.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puntaje)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NotaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NotaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NotaId })
+        </td>
+    </tr>
+}
+
+</table>
